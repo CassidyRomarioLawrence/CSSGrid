@@ -1,0 +1,41 @@
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 100px 1fr 100px;
+    height: 100vh;
+    width: 100vw;
+    text-shadow: 2px 2px 2px white;
+    font-weight: bold;
+    font-size: 30px;
+    border: 2px solid black;
+    gap: 2px;
+}
+header,footer{
+    background-color: lightcoral;
+    grid-column: 1/5;
+}
+aside{
+    background-color: lightblue;
+}
+main{
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    row-gap: 2px;
+    
+}
+section{
+    background-color: lightseagreen;
+    grid-column: 1/4;
+}
+header,aside,section,footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
